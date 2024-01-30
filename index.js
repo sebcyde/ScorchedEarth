@@ -1,8 +1,7 @@
 import kill from "tree-kill";
 import psList from "ps-list";
 
-const KillChild = process => {
-	console.log(process.name);
+const KillChild = async process => {
 	kill(process.pid);
 };
 
@@ -21,10 +20,10 @@ const main = async () => {
 	);
 
 	if (processes.length == 0) {
-		console.log("No Chrome Instances Found");
+		console.log("No Processes Found");
 	} else {
-		processes.forEach(p => {
-			KillChild(p);
+		processes.sort().forEach(async p => {
+			await KillChild(p);
 		});
 	}
 
