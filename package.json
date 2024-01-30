@@ -1,0 +1,16 @@
+{
+  "name": "scorchedearth",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+"type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "JTSC",
+  "license": "ISC",
+  "dependencies": {
+    "ps-list": "^8.1.1",
+    "tree-kill": "^1.2.2"
+  }
+}
